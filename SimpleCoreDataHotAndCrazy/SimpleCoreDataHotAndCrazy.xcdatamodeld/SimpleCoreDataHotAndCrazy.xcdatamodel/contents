@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="14F1021" minimumToolsVersion="Automatic">
+    <entity name="EntriesForProfile" representedClassName="SimpleCoreDataHotAndCrazy.EntriesForProfile" syncable="YES">
+        <attribute name="crazyScore" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="entryDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="hotScore" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="girlProfile" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GirlProfile" inverseName="entriesForProfile" inverseEntity="GirlProfile" syncable="YES"/>
+    </entity>
+    <entity name="GirlProfile" representedClassName="SimpleCoreDataHotAndCrazy.GirlProfile" syncable="YES">
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="entriesForProfile" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="EntriesForProfile" inverseName="girlProfile" inverseEntity="EntriesForProfile" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EntriesForProfile" positionX="-81" positionY="63" width="128" height="105"/>
+        <element name="GirlProfile" positionX="-299" positionY="63" width="128" height="103"/>
+    </elements>
+</model>
